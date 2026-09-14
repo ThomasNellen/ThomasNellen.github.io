@@ -23,9 +23,35 @@ those words must match the `data-topic` attribute on a filter button at
 the top of the same file. Adding a new topic means adding a button and
 using its word in the papers that belong to it.
 
+Each paper carries a `<details class="cite">` block holding its BibTeX
+entry. Edit the text inside `<pre class="bibtex">` directly. Keep it
+flush against the left margin, because `<pre>` preserves every space.
+Use `@article` for published work, `@techreport` for a working paper in
+a numbered series and `@unpublished` for work in progress. The citation
+key convention is surname, year, short slug, as in `nellen2026working`.
+
 To add an update or a writing, copy one `<article class="update">` block
 in `index.html` or one `<article class="writing">` block in
 `writings.html`. Newest goes first.
+
+## Machine-readable research
+
+New papers added from here on get the treatment proposed in Paul
+Goldsmith-Pinkham and Kyle Jensen's post on LLM-friendly academic papers
+(paulgp.com, March 2026). Existing work is not being converted
+retroactively.
+
+At minimum that means an `llms.txt` beside the PDF: a short author-written
+orientation covering what the paper shows, what it does not show, the data
+and methods, the key results, the limitations and scope, a navigation
+guide, and the publication status. The limitations section is the one that
+matters and the one no model can write for you. Name the populations,
+periods and conditions the result does not cover.
+
+Where the LaTeX source and a reproduction package exist, the fuller form is
+a zip bundle holding `paper.md`, `figures/`, `data/` as CSV rather than
+images of tables, `code/` with a single `reproduce.sh` and pinned
+dependencies, and `references.bib`.
 
 ## Previewing locally
 

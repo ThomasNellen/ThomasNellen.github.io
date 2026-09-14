@@ -281,6 +281,64 @@ h2.section-title {
   padding: 1.5rem 0;
 }
 
+/* --- Citation block --------------------------------------------- */
+
+.cite { margin-top: 0.85rem; }
+
+.cite summary {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  cursor: pointer;
+  list-style: none;
+  width: fit-content;
+}
+.cite summary::-webkit-details-marker { display: none; }
+.cite summary::before { content: "+"; width: 0.7em; }
+.cite[open] summary::before { content: "\2013"; }
+.cite summary:hover { color: var(--ink); }
+
+.cite-body {
+  margin-top: 0.7rem;
+  padding: 0.85rem 0 0.85rem 0.95rem;
+  border-left: 2px solid var(--accent-dim);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.7rem;
+  max-width: 44rem;
+}
+
+pre.bibtex {
+  margin: 0;
+  width: 100%;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  tab-size: 2;
+}
+
+.copy {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 0.22rem 0.65rem;
+  cursor: pointer;
+  transition: color 0.12s, border-color 0.12s, background-color 0.12s;
+}
+.copy:hover { border-color: var(--accent); background: var(--accent-dim); }
+.copy[data-state="done"] { color: var(--accent); border-color: var(--accent); background: var(--accent-dim); }
+
 /* --- Writing list ----------------------------------------------- */
 
 .writing {
