@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Papers &mdash; Thomas Nellen</title>
+<meta name="description" content="Published articles, working papers and work in progress.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<div class="page">
+
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="papers.html" aria-current="page">Papers</a>
+    <a href="writings.html">Writings</a>
+    <a href="assets/cv.pdf">CV</a>
+  </nav>
+
+  <header class="masthead">
+    <h1 class="name">Papers</h1>
+  </header>
+
+  <!-- ============ Topic filter ========================================
+       Each button's data-topic must match a word in a paper's
+       data-topics attribute. Add or rename topics freely.
+  ==================================================================== -->
+  <div class="section">
+    <div class="filter" role="group" aria-label="Filter papers by topic">
+      <button type="button" data-topic="all" aria-pressed="true">all</button>
+      <button type="button" data-topic="topic-one" aria-pressed="false">[topic one]</button>
+      <button type="button" data-topic="topic-two" aria-pressed="false">[topic two]</button>
+      <button type="button" data-topic="topic-three" aria-pressed="false">[topic three]</button>
+    </div>
+
+    <!-- ============ Published ============ -->
+    <section class="paper-group">
+      <h2 class="section-title">Published</h2>
+      <div class="papers">
+
+        <article class="paper" data-topics="topic-one topic-two">
+          <h3 class="paper-title">[Title of the published article]</h3>
+          <p class="paper-authors">with [Coauthor Name] and [Coauthor Name]</p>
+          <p class="paper-venue">[Journal Name], Vol. 00, 2026</p>
+          <p class="paper-abstract">
+            Two or three sentences stating what the paper does and what it finds.
+            Write the result, not the motivation: a reader scanning this page wants
+            the claim, and will open the PDF for the argument.
+          </p>
+          <p class="paper-links"><a href="#">PDF</a> <a href="#">Journal</a> <a href="#">Replication</a></p>
+        </article>
+
+        <article class="paper" data-topics="topic-three">
+          <h3 class="paper-title">[Title of an earlier published article]</h3>
+          <p class="paper-authors">with [Coauthor Name]</p>
+          <p class="paper-venue">[Journal Name], Vol. 00, 2025</p>
+          <p class="paper-abstract">
+            One short paragraph summarising the finding.
+          </p>
+          <p class="paper-links"><a href="#">PDF</a> <a href="#">Journal</a></p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ Working papers ============ -->
+    <section class="paper-group">
+      <h2 class="section-title">Working papers</h2>
+      <div class="papers">
+
+        <article class="paper" data-topics="topic-one">
+          <h3 class="paper-title">[Title of the working paper]</h3>
+          <p class="paper-authors">single-authored</p>
+          <p class="paper-venue">[Working paper series] No. 000 &middot; R&amp;R at [Journal]</p>
+          <p class="paper-abstract">
+            One short paragraph summarising the finding.
+          </p>
+          <p class="paper-links"><a href="#">PDF</a> <a href="#">SSRN</a></p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ Work in progress ============ -->
+    <section class="paper-group">
+      <h2 class="section-title">Work in progress</h2>
+      <div class="papers">
+
+        <article class="paper" data-topics="topic-two topic-three">
+          <h3 class="paper-title">[Title of a project in progress]</h3>
+          <p class="paper-authors">with [Coauthor Name]</p>
+          <p class="paper-venue">Draft available on request</p>
+        </article>
+
+      </div>
+    </section>
+
+    <p class="empty" hidden id="no-results">No papers under this topic yet.</p>
+  </div>
+
+  <footer class="foot">Last updated September 2026</footer>
+
+</div>
+<script src="assets/site.js"></script>
+</body>
+</html>

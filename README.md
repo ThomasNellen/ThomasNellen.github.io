@@ -1,0 +1,74 @@
+# Personal research homepage
+
+A static site. No build step, no framework, no dependencies. Open the HTML
+files in a browser and they work.
+
+```
+index.html      Landing page: name, short bio, contact, updates feed
+papers.html     Papers grouped by status, filterable by topic
+writings.html   Shorter pieces for a general audience
+assets/site.css All styling, including the light and dark palettes
+assets/site.js  The topic filter on the papers page
+assets/cv.pdf   Put your CV here (the nav links to it)
+```
+
+## Editing
+
+Anything in `[square brackets]` is a placeholder. Search for `[` to find
+them all.
+
+To add a paper, copy one `<article class="paper">` block in `papers.html`
+and edit it. Its `data-topics` attribute lists the topics it belongs to;
+those words must match the `data-topic` attribute on a filter button at
+the top of the same file. Adding a new topic means adding a button and
+using its word in the papers that belong to it.
+
+To add an update or a writing, copy one `<article class="update">` block
+in `index.html` or one `<article class="writing">` block in
+`writings.html`. Newest goes first.
+
+## Previewing locally
+
+```bash
+cd ~/Documents/Homepage && python3 -m http.server 4173
+```
+
+Then open http://localhost:4173 in a browser. Stop it with Ctrl-C.
+
+## Colors and type
+
+Every color is a CSS custom property declared at the top of
+`assets/site.css`. The light palette is in `:root`; the two blocks after
+it redefine the same names for dark mode. Change a value once and it
+applies everywhere.
+
+The typefaces are Newsreader for headings, Public Sans for body text and
+JetBrains Mono for dates, labels and the topic filter. They load from
+Google Fonts via the `<link>` tag in each page's `<head>`.
+
+## Publishing
+
+Any static host works. Three that are free and need no credit card:
+
+**GitHub Pages.** Create an empty repository on github.com, then:
+
+```bash
+git remote add origin https://github.com/USERNAME/REPO.git && git push -u origin main
+```
+
+In the repository's Settings, under Pages, set the source to the `main`
+branch and the root folder. The site appears at
+`https://USERNAME.github.io/REPO/` within a minute or two. For a
+repository named `USERNAME.github.io` it appears at the bare domain.
+
+**Cloudflare Pages** and **Netlify** both let you connect the same
+repository and deploy on every push, with a free subdomain and a free
+TLS certificate.
+
+## Custom domain
+
+Buy the domain from a registrar, then point it at the host. On GitHub
+Pages that means adding a file named `CNAME` at the top of the repository
+containing only your domain, and creating the DNS records GitHub's Pages
+settings page tells you to create. The other two hosts walk you through
+it in their dashboards.
