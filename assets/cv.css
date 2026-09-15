@@ -150,12 +150,12 @@
 
   .cv h2 {
     font-size: 7.4pt;
-    margin: 6mm 0 2.4mm;
+    margin: 5mm 0 2.2mm;
     break-after: avoid;
     page-break-after: avoid;
   }
 
-  .e { grid-template-columns: 22mm 1fr; gap: 0 5mm; padding: 0.9mm 0; }
+  .e { grid-template-columns: 22mm 1fr; gap: 0 5mm; padding: 0.7mm 0; }
   .e .y { font-size: 7.4pt; }
   .note-line { font-size: 7.2pt; margin-left: 27mm; }
 
