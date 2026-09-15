@@ -25,7 +25,8 @@
   font-family: var(--font-mono);
   font-size: 0.72rem;
   letter-spacing: 0.06em;
-  text-transform: uppercase;
+  text-transform: none;
+  letter-spacing: 0.02em;
   color: var(--ink-soft);
   margin: 0 0 0.55rem;
 }

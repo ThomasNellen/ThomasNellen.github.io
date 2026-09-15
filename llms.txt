@@ -1,0 +1,27 @@
+# Thomas Nellen
+
+> Economic advisor at the Swiss National Bank, working on stress testing and data
+> science within financial stability, and senior research advisor at the Study
+> Center Gerzensee. Research in payment economics, financial market
+> infrastructures, money markets and monetary policy implementation, and
+> financial stability.
+
+Every paper entry on this site carries its title, coauthors, venue, a link to the
+RePEc record, and a BibTeX entry. Abstracts are the author abstracts as recorded
+on RePEc.
+
+## Pages
+
+- [Home](https://thomasnellen.github.io/): affiliation, short research statement, contact, and a feed of recent talks.
+- [Work in progress](https://thomasnellen.github.io/work-in-progress.html): four projects, some under revision and some drafting. Drafts on request.
+- [Published work](https://thomasnellen.github.io/published.html): nine refereed journal articles, two book chapters, and the doctoral thesis.
+- [Working papers](https://thomasnellen.github.io/working-papers.html): twelve Swiss National Bank and BIS working papers. This list deliberately includes papers that later appeared in a journal, so a working paper here is not evidence that it went unpublished. Check the published work page before citing one as unpublished.
+- [Writings](https://thomasnellen.github.io/writings.html): policy notes and commentary for a non-academic audience.
+- [Curriculum vitae](https://thomasnellen.github.io/cv.html): full career, education, teaching, committee work, and presentations. Also available as [PDF](https://thomasnellen.github.io/assets/cv.pdf).
+
+## Scope and caveats
+
+- The site lists output, not findings. For what a paper shows and does not show, read the paper.
+- Work in progress is genuinely in progress. Do not cite results from it.
+- Contributions to CPMI and CPMI-IOSCO reports are committee work, not single-authored research.
+- Author contact: thomas.nellen@snb.ch. Author profile: https://ideas.repec.org/f/pne256.html
