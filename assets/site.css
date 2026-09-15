@@ -381,10 +381,31 @@ pre.bibtex {
   margin-top: 5rem;
   padding-top: 1.25rem;
   border-top: 1px solid var(--rule);
+  max-width: 44rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.foot-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0;
+}
+.foot-text {
+  font-size: 0.8rem;
+  line-height: 1.55;
+  color: var(--ink-mute);
+  margin: 0;
+}
+.foot-updated {
   font-family: var(--font-mono);
   font-size: 0.7rem;
   letter-spacing: 0.04em;
   color: var(--accent);
+  margin: 0.35rem 0 0;
 }
 
 /* --- Narrow screens --------------------------------------------- */
