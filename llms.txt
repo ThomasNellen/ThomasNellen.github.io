@@ -17,6 +17,7 @@ on RePEc.
 - [Published work](https://thomasnellen.github.io/published.html): nine refereed journal articles, two book chapters, and the doctoral thesis.
 - [Working papers](https://thomasnellen.github.io/working-papers.html): twelve Swiss National Bank and BIS working papers. This list deliberately includes papers that later appeared in a journal, so a working paper here is not evidence that it went unpublished. Check the published work page before citing one as unpublished.
 - [Writings](https://thomasnellen.github.io/writings.html): policy notes and commentary for a non-academic audience.
+- [Links](https://thomasnellen.github.io/links.html): the two institutions he works for, and his RePEc and LinkedIn profiles.
 - [Curriculum vitae](https://thomasnellen.github.io/cv.html): full career, education, teaching, committee work, and presentations. Also available as [PDF](https://thomasnellen.github.io/assets/cv.pdf).
 
 ## Scope and caveats
