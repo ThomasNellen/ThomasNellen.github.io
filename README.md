@@ -5,7 +5,9 @@ files in a browser and they work.
 
 ```
 index.html      Landing page: name, short bio, contact, updates feed
-papers.html     Papers grouped by status, filterable by topic
+work-in-progress.html   Projects under revision or drafting
+published.html          Refereed articles, book chapters, thesis
+working-papers.html     Every working paper, published version or not
 writings.html   Shorter pieces for a general audience
 assets/site.css All styling, including the light and dark palettes
 assets/site.js  The topic filter on the papers page
@@ -20,11 +22,15 @@ assets/build-cv.sh  Rerenders the PDF after you edit cv.html
 Anything in `[square brackets]` is a placeholder. Search for `[` to find
 them all.
 
-To add a paper, copy one `<article class="paper">` block in `papers.html`
-and edit it. Its `data-topics` attribute lists the topics it belongs to;
+The three research pages share one layout. To add a paper, copy an
+`<article class="paper">` block on the relevant page and edit it. Its `data-topics` attribute lists the topics it belongs to;
 those words must match the `data-topic` attribute on a filter button at
 the top of the same file. Adding a new topic means adding a button and
 using its word in the papers that belong to it.
+
+Topics are shared across all three pages, so a paper listed as both a
+working paper and a published article should carry the same tags in both
+places.
 
 Each paper carries a `<details class="cite">` block holding its BibTeX
 entry. Edit the text inside `<pre class="bibtex">` directly. Keep it
