@@ -9,8 +9,9 @@
   --ink-soft:   #4d4644;
   --ink-mute:   #7c7471;
   --rule:       #e7e1df;
-  --accent:     #a32c3c;
-  --accent-dim: #f7e8e9;
+  --accent:     #bd2437;
+  --accent-dim: #fae9eb;
+  --rule-accent:#ecc8cd;
   --focus:      #c04553;
 
   --font-display: "Newsreader", Georgia, "Times New Roman", serif;
@@ -29,8 +30,9 @@
     --ink-soft:   #bcb4b1;
     --ink-mute:   #8e8683;
     --rule:       #332d2c;
-    --accent:     #e08b90;
-    --accent-dim: #2e2022;
+    --accent:     #ea8f96;
+    --accent-dim: #332225;
+    --rule-accent:#4d3035;
     --focus:      #e08b90;
   }
 }
@@ -42,8 +44,9 @@
   --ink-soft:   #bcb4b1;
   --ink-mute:   #8e8683;
   --rule:       #332d2c;
-  --accent:     #e08b90;
-  --accent-dim: #2e2022;
+  --accent:     #ea8f96;
+  --accent-dim: #332225;
+  --rule-accent:#4d3035;
   --focus:      #e08b90;
 }
 
@@ -124,7 +127,7 @@ h1.name {
   font-size: 0.74rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--ink-mute);
+  color: var(--accent);
   margin: -0.75rem 0 0;
 }
 
@@ -160,7 +163,7 @@ h2.section-title {
   color: var(--accent);
   margin: 0 0 1.75rem;
   padding-bottom: 0.75rem;
-  border-bottom: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule-accent);
 }
 
 /* --- Updates: date gutter + entry ------------------------------- */
@@ -180,7 +183,7 @@ h2.section-title {
   font-family: var(--font-mono);
   font-size: 0.72rem;
   letter-spacing: 0.04em;
-  color: var(--ink-mute);
+  color: var(--accent);
   padding-top: 0.28rem;
   font-variant-numeric: tabular-nums;
 }
@@ -257,7 +260,7 @@ h2.section-title {
   font-family: var(--font-mono);
   font-size: 0.72rem;
   letter-spacing: 0.04em;
-  color: var(--ink-mute);
+  color: var(--accent);
   margin: 0.4rem 0 0;
 }
 .paper-abstract {
@@ -352,7 +355,7 @@ pre.bibtex {
 .writing-meta {
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  color: var(--ink-mute);
+  color: var(--accent);
   padding-top: 0.3rem;
   font-variant-numeric: tabular-nums;
 }
