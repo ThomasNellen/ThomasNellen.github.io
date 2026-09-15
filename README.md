@@ -9,7 +9,10 @@ papers.html     Papers grouped by status, filterable by topic
 writings.html   Shorter pieces for a general audience
 assets/site.css All styling, including the light and dark palettes
 assets/site.js  The topic filter on the papers page
-assets/cv.pdf   Put your CV here (the nav links to it)
+cv.html         Curriculum vitae, the source for the PDF
+assets/cv.css   CV layout, including the print rules
+assets/cv.pdf   Generated from cv.html, do not edit by hand
+assets/build-cv.sh  Rerenders the PDF after you edit cv.html
 ```
 
 ## Editing
@@ -33,6 +36,23 @@ key convention is surname, year, short slug, as in `nellen2026working`.
 To add an update or a writing, copy one `<article class="update">` block
 in `index.html` or one `<article class="writing">` block in
 `writings.html`. Newest goes first.
+
+## The CV
+
+`cv.html` is the source. Edit it, then run:
+
+```bash
+./assets/build-cv.sh
+```
+
+That drives headless Chrome over the page and writes `assets/cv.pdf`.
+Page size, margins and the print type scale live in the `@media print`
+block at the bottom of `assets/cv.css`. Watch the page count after
+editing, since a single extra line can push a fourth page.
+
+The detailed source CV in `ressources/` is deliberately excluded from git
+by `.gitignore`. It carries a private address and phone numbers, and this
+repository is public.
 
 ## Machine-readable research
 

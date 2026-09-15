@@ -1,0 +1,162 @@
+/* Curriculum vitae. Inherits the site palette and typefaces from
+   site.css, then overrides for a denser, print-first layout. */
+
+.cv {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding-inline: 1.5rem;
+  padding-block: 2rem 4rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.cv-head { margin-bottom: 2.25rem; }
+
+.cv-head h1 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 2.1rem;
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+  margin: 0 0 0.5rem;
+}
+
+.cv-role {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 0.55rem;
+}
+
+.cv-fields {
+  font-size: 0.875rem;
+  color: var(--ink-soft);
+  margin: 0 0 0.7rem;
+  max-width: 36rem;
+}
+
+.cv-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.1rem;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  margin: 0;
+}
+.cv-contact a { color: var(--accent); text-decoration: none; }
+
+.cv h2 {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 1.9rem 0 0.85rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid var(--rule);
+}
+.cv h2 .h-note {
+  text-transform: none;
+  letter-spacing: 0.04em;
+  color: var(--ink-mute);
+  font-style: italic;
+}
+
+/* One entry: year gutter, then content. */
+.e {
+  display: grid;
+  grid-template-columns: 6.25rem 1fr;
+  gap: 0 1.1rem;
+  padding: 0.3rem 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.e .y {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+  color: var(--ink-mute);
+  padding-top: 0.15rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.e .t { margin: 0; font-weight: 600; color: var(--ink); }
+.e .t .w { font-weight: 400; color: var(--ink-mute); }
+.e .d { margin: 0.2rem 0 0; color: var(--ink-soft); }
+.e .p { margin: 0; color: var(--ink-soft); }
+.e em { font-style: italic; }
+
+.note-line {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--ink-mute);
+  margin: 0.6rem 0 0 7.35rem;
+}
+
+.cv-date { color: var(--ink-mute); margin-left: auto; }
+
+@media (max-width: 34rem) {
+  .e { grid-template-columns: 1fr; gap: 0.15rem; }
+  .e .y { padding-top: 0; }
+  .note-line { margin-left: 0; }
+}
+
+/* --- Print -------------------------------------------------------
+   Chrome renders this to assets/cv.pdf. Force the light palette so
+   the file never inherits a dark viewer theme, and keep the accent
+   colour rather than letting the printer drop it.
+   ----------------------------------------------------------------- */
+
+@page {
+  size: A4;
+  margin: 16mm 15mm 14mm;
+}
+
+@media print {
+  :root {
+    --paper:      #ffffff;
+    --ink:        #000000;
+    --ink-soft:   #26211f;
+    --ink-mute:   #6b6360;
+    --rule:       #cfc8c5;
+    --accent:     #a32c3c;
+  }
+
+  html, body {
+    background: #ffffff;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .screen-only { display: none !important; }
+
+  .cv {
+    max-width: none;
+    padding: 0;
+    font-size: 9.3pt;
+    line-height: 1.4;
+  }
+
+  .cv-head { margin-bottom: 7mm; }
+  .cv-head h1 { font-size: 20pt; }
+  .cv-role, .cv-contact { font-size: 7.6pt; }
+  .cv-fields { font-size: 9pt; }
+  .cv-contact a { color: var(--accent); }
+
+  .cv h2 {
+    font-size: 7.4pt;
+    margin: 6mm 0 2.4mm;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .e { grid-template-columns: 22mm 1fr; gap: 0 5mm; padding: 0.9mm 0; }
+  .e .y { font-size: 7.4pt; }
+  .note-line { font-size: 7.2pt; margin-left: 27mm; }
+
+  section { break-inside: auto; }
+}
