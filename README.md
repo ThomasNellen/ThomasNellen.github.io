@@ -119,8 +119,36 @@ TLS certificate.
 
 ## Custom domain
 
-Buy the domain from a registrar, then point it at the host. On GitHub
-Pages that means adding a file named `CNAME` at the top of the repository
-containing only your domain, and creating the DNS records GitHub's Pages
-settings page tells you to create. The other two hosts walk you through
-it in their dashboards.
+Nothing but the domain itself is needed. GitHub Pages keeps serving the
+site and issues the TLS certificate at no cost, so there is no hosting
+or certificate to buy. Email at the domain is a separate product and is
+deliberately not part of this setup.
+
+At the registrar, create five records for the zone. Four A records for
+the bare domain:
+
+```
+185.199.108.153
+185.199.109.153
+185.199.110.153
+185.199.111.153
+```
+
+and one CNAME sending `www` to `thomasnellen.github.io`. IPv6 is
+optional; if you want it, add four AAAA records on the bare domain
+pointing to `2606:50c0:8000::153` through `2606:50c0:8003::153`.
+
+Do not create a wildcard record. GitHub warns that `*.example.ch`
+exposes the domain to takeover.
+
+Then, in the repository on github.com, open Settings, then Pages, and
+enter the domain under Custom domain. That writes a `CNAME` file to the
+top of the repository, so pull afterwards or the next push will conflict.
+Finally tick **Enforce HTTPS**.
+
+Two waits are normal. DNS changes take up to 24 hours to propagate, and
+the Enforce HTTPS checkbox stays greyed out until the certificate has
+been issued, which can also take up to 24 hours.
+
+The bare `thomasnellen.github.io` address keeps working afterwards and
+redirects to the custom domain, so nothing already shared breaks.
