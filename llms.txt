@@ -26,4 +26,4 @@ on RePEc.
 - The site lists output, not findings. For what a paper shows and does not show, read the paper.
 - Work in progress is genuinely in progress. Do not cite results from it.
 - Contributions to CPMI and CPMI-IOSCO reports are committee work, not single-authored research.
-- Author contact: thomas.nellen@snb.ch. Author profile: https://ideas.repec.org/f/pne256.html
+- Author contact: thomas.a.nellen@gmail.com. Author profile: https://ideas.repec.org/f/pne256.html
