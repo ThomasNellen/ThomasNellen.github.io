@@ -432,3 +432,41 @@ pre.bibtex {
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
 }
+
+/* --- Portrait beside the masthead (home page only) ---------------
+   Two columns on a wide screen so the photo costs no vertical space
+   and Updates stays above the fold. Below 46rem the column reverses,
+   putting the photo above the name the way a phone layout expects.
+   ----------------------------------------------------------------- */
+
+.intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+.intro .masthead { flex: 1 1 auto; min-width: 0; }
+
+.portrait {
+  flex: 0 0 13.5rem;
+  margin: 0;
+}
+
+.portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 3px;
+}
+
+@media (max-width: 46rem) {
+  .intro {
+    flex-direction: column-reverse;
+    gap: 1.6rem;
+  }
+  .portrait {
+    flex: none;
+    width: min(11rem, 50%);
+  }
+}
