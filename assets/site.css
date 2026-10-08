@@ -210,35 +210,6 @@ h2.section-title {
   margin: 0.15rem 0 0;
 }
 
-/* --- Topic filter ----------------------------------------------- */
-
-.filter {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin: 0 0 2.5rem;
-  padding: 0;
-  list-style: none;
-}
-.filter button {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  letter-spacing: 0.04em;
-  color: var(--ink-mute);
-  background: transparent;
-  border: 1px solid var(--rule);
-  border-radius: 999px;
-  padding: 0.28rem 0.7rem;
-  cursor: pointer;
-  transition: color 0.12s, border-color 0.12s, background-color 0.12s;
-}
-.filter button:hover { color: var(--ink); border-color: var(--ink-mute); }
-.filter button[aria-pressed="true"] {
-  color: var(--accent);
-  border-color: var(--accent);
-  background: var(--accent-dim);
-}
-
 /* --- Papers ----------------------------------------------------- */
 
 .papers { display: flex; flex-direction: column; }
@@ -284,12 +255,6 @@ h2.section-title {
   font-size: 0.72rem;
   letter-spacing: 0.04em;
   margin-top: 0.85rem;
-}
-
-.empty {
-  font-size: 0.9375rem;
-  color: var(--ink-mute);
-  padding: 1.5rem 0;
 }
 
 /* --- Citation block --------------------------------------------- */

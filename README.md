@@ -10,7 +10,7 @@ published.html          Refereed articles, book chapters, thesis
 working-papers.html     Every working paper, published version or not
 writings.html   Shorter pieces for a general audience
 assets/site.css All styling, including the light and dark palettes
-assets/site.js  The topic filter on the papers page
+assets/site.js  Copy-to-clipboard for the BibTeX blocks
 cv.html         Curriculum vitae, the source for the PDF
 assets/cv.css   CV layout, including the print rules
 assets/cv.pdf   Generated from cv.html, do not edit by hand
@@ -19,18 +19,8 @@ assets/build-cv.sh  Rerenders the PDF after you edit cv.html
 
 ## Editing
 
-Anything in `[square brackets]` is a placeholder. Search for `[` to find
-them all.
-
 The three research pages share one layout. To add a paper, copy an
-`<article class="paper">` block on the relevant page and edit it. Its `data-topics` attribute lists the topics it belongs to;
-those words must match the `data-topic` attribute on a filter button at
-the top of the same file. Adding a new topic means adding a button and
-using its word in the papers that belong to it.
-
-Topics are shared across all three pages, so a paper listed as both a
-working paper and a published article should carry the same tags in both
-places.
+`<article class="paper">` block on the relevant page and edit it.
 
 Each paper carries a `<details class="cite">` block holding its BibTeX
 entry. Edit the text inside `<pre class="bibtex">` directly. Keep it
@@ -95,7 +85,7 @@ it redefine the same names for dark mode. Change a value once and it
 applies everywhere.
 
 The typefaces are Newsreader for headings, Public Sans for body text and
-JetBrains Mono for dates, labels and the topic filter. They load from
+JetBrains Mono for dates and labels. They load from
 Google Fonts via the `<link>` tag in each page's `<head>`.
 
 ## Publishing
