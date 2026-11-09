@@ -435,3 +435,15 @@ pre.bibtex {
     width: min(11rem, 50%);
   }
 }
+
+/* A longer update: a short announcement rather than a one-line item. */
+.update-body {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+  margin: 0;
+  max-width: var(--measure);
+}
+.update-body strong { color: var(--ink); font-weight: 600; }
+.update-body a { border-bottom: 1px solid var(--rule-accent); text-decoration: none; }
+.update-body a:hover { border-bottom-color: var(--accent); }
