@@ -12,7 +12,7 @@ on RePEc.
 
 ## Pages
 
-- [Home](https://thomasnellen.github.io/): affiliation, short research statement, contact, and a feed of recent talks.
+- [Home](https://thomasnellen.github.io/): affiliation, short research statement, contact, and a feed split into upcoming and past talks.
 - [Work in progress](https://thomasnellen.github.io/work-in-progress.html): four projects, some under revision and some drafting. Drafts on request.
 - [Published work](https://thomasnellen.github.io/published.html): nine refereed journal articles, two book chapters, and the doctoral thesis.
 - [Working papers](https://thomasnellen.github.io/working-papers.html): twelve Swiss National Bank and BIS working papers. This list deliberately includes papers that later appeared in a journal, so a working paper here is not evidence that it went unpublished. Check the published work page before citing one as unpublished.
